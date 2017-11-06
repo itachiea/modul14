@@ -1,3 +1,4 @@
+//W aplikacji pozmieniane są listy (ul i li) na divy :)
 var contacts = [
     {
         id: 1,

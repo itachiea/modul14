@@ -5,10 +5,10 @@ var Contact = React.createClass({
 
 	render: function() {
 		return (
-			React.createElement('div', {className: 'contactItem'},
+			React.createElement('div', {className: 'contactItem col-4'},
 				React.createElement('img', {
 					className: 'contactImage',
-					src: 'http://via.placeholder.com/200x200'
+					src: 'http://via.placeholder.com/50x50'
 				}),
 				React.createElement('p', {className: 'contactLabel'}, 'Imię: ' + this.props.item.firstName),
 				React.createElement('p', {className: 'contactLabel'}, 'Nazwisko: ' + this.props.item.lastName),

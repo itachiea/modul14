@@ -1,13 +1,13 @@
-ul li > img {
-	width: 50px;
-	height: 50px;
+.contactItem {
+	margin-top: 10px;
+	padding: 0;
+}
+form, .contactsList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 ul {
-	list-style: none;
-}
-li {
-	width: 150px;
-	height: 150px;
-	list-style-type: none;
-	float: left;
+	padding: 0;
+	margin: 0;
 }
