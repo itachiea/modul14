@@ -11,12 +11,26 @@ var Counter = React.createClass({
 	},
 	componentWillMount() {
 		return (
-			calc(),
-			console.log(this.props.mleko)
+			calc()
 		);
 	},
+	componentDidMount() {
+		console.log('animacje?');
+	},
 	getDefaultProps() {
-		mleko: 'jajko'
+		console.log('ustawienie domyślnych wartości');
+	},
+	componentWillReceiveProps() {
+		console.log('np. porównanie jakiś danych');
+	},
+	shouldComponentUpdate() {
+		console.log('np. porównanie jakiś danych');
+	},
+	componentWillUpdate() {
+		console.log('np. pobranie jakichś danych z innego źródła');
+	},
+	componentDidUpdate() {
+		console.log('animacje?');
 	},
 
 	increment: function() {
