@@ -21,10 +21,11 @@ var Counter = React.createClass({
 		console.log('ustawienie domyślnych wartości');
 	},
 	componentWillReceiveProps() {
-		console.log('np. porównanie jakiś danych');
+		console.log('aktualizacja stanu');
 	},
 	shouldComponentUpdate() {
-		console.log('np. porównanie jakiś danych');
+        console.log('np. porównanie jakiś danych');
+		return true;
 	},
 	componentWillUpdate() {
 		console.log('np. pobranie jakichś danych z innego źródła');
@@ -55,41 +56,6 @@ var Counter = React.createClass({
 });
 
 var element = React.createElement(Counter);
+var element2 = React.createElement(Counter);
 ReactDOM.render(element, document.getElementById('app'));
-
-var Counter2 = React.createClass({
-	getInitialState: function() {
-		return {
-			counter: 0
-		};
-	},
-
-	increment: function() {
-		this.setState({
-			counter: this.state.counter + 1
-		});
-	},
-
-	decrement: function() {
-		this.setState({
-			counter: this.state.counter - 1
-		});
-	},
-
-	componentWillUnmount: function() {
-		console.log('mleko');
-	},
-
-	render: function() {
-		return React.createElement('div', {className: 'div2'},
-			React.createElement('span', {}, 'Licznik ' + this.state.counter),
-			React.createElement('button', {onClick: this.increment}, 'Zwiększanie'),
-			React.createElement('button', {onClick: this.decrement}, 'Zmniejszanie')
-		);
-	}
-});
-
-
-var element2 = React.createElement(Counter2);
-
 ReactDOM.render(element2, document.getElementById('app2'));
